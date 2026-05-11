@@ -1,0 +1,15 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Consultation;
+use Illuminate\Http\Request;
+
+class ConsultationController extends Controller
+{
+    public function count(Request $request, $patientId)
+    {
+        $count = Consultation::where('patient_id', $patientId)->count();
+        return response()->json(['count' => $count]);
+    }
+}
