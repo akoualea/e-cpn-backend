@@ -1,3 +1,1 @@
-git add nixpacks.toml Procfile
-git commit -m "add railway config"
-git push
+web: php artisan serve --host=0.0.0.0 --port=$PORT
